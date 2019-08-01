@@ -4,30 +4,65 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit383d2b1f92ba1996fc9e458573a299aa
+class ComposerStaticInit8230dc20215fea7100415f57bbd13079
 {
+    public static $files = array (
+        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
-        'H' => 
+        'S' => 
         array (
-            'Hcode\\' => 6,
+            'Slim\\' => 5,
+        ),
+        'P' => 
+        array (
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
+        'I' => 
+        array (
+            'Interop\\Container\\' => 18,
+        ),
+        'F' => 
+        array (
+            'FastRoute\\' => 10,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Hcode\\' => 
+        'Slim\\' => 
         array (
-            0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
+            0 => __DIR__ . '/..' . '/slim/slim/Slim',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Interop\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
+        ),
+        'FastRoute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
     );
 
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/',
+    );
+
     public static $prefixesPsr0 = array (
-        'S' => 
-        array (
-            'Slim' => 
-            array (
-                0 => __DIR__ . '/..' . '/slim/slim',
-            ),
-        ),
         'R' => 
         array (
             'Rain' => 
@@ -35,26 +70,22 @@ class ComposerStaticInit383d2b1f92ba1996fc9e458573a299aa
                 0 => __DIR__ . '/..' . '/rain/raintpl/library',
             ),
         ),
-    );
-
-    public static $classMap = array (
-        'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
-        'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
-        'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
-        'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
-        'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
-        'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
-        'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
-        'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
+        'P' => 
+        array (
+            'Pimple' => 
+            array (
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit383d2b1f92ba1996fc9e458573a299aa::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit383d2b1f92ba1996fc9e458573a299aa::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit383d2b1f92ba1996fc9e458573a299aa::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit383d2b1f92ba1996fc9e458573a299aa::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8230dc20215fea7100415f57bbd13079::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8230dc20215fea7100415f57bbd13079::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit8230dc20215fea7100415f57bbd13079::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit8230dc20215fea7100415f57bbd13079::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
